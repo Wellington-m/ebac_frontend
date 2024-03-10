@@ -3,3 +3,104 @@
   margin: 0;
   padding: 0;
 }
+
+body > header { /*somente o header que é filho direto do body sera modificado*/
+  background-color: #2f3640;
+  padding: 16 px 0;
+  color: #f5f6fa;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header li {
+  display: inline;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 16px;
+}
+
+header li a {
+  color: #f5f6fa;
+  text-decoration: none;
+}
+
+.container {
+  width: 1366px;
+  margin: 0 auto;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /*distribui o conteudo igualmente na horizontal*/
+}
+
+.articles article img {
+  /* height: 180px; */
+  width: 100%;
+}
+
+.articles article {
+  width: 30%; /*Com 3 elementos na tela ocupa 90% da largura, os outros 10% o justify-content no .articles distribui igualmente*/
+}
+
+section {
+  padding: 16px 0;
+}
+
+section h2,
+.articles article { /*Aplica a formatação para os h2 e para os 'article'*/
+  margin-bottom: 16px;
+}
+
+.articles article h3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.articles article a {
+  background-color: blue;
+  color: #fff;
+  padding: 8px;
+  display: inline-block; /*a tag 'a' por padrão tem o display inline, que pode causar sobreposição de conteúdo, mudar para inline-block pode resolver*/
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.articles article a:hover {
+  text-decoration: underline;
+}
+
+.articles article p,
+.articles article a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.articles article h3 {
+  font-size: 24px;
+}
+
+section h2 {
+  font-size: 32px;
+}
+
+#sports {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+#sports .articles article a {
+  background-color: rgba(0, 255, 0, 1);
+  margin-top: 8px;
+}
+
+#economy {
+  background-color: #f8f59f;
+}
+
+#economy .articles article a {
+  background-color: #ff9f1a;
+}
