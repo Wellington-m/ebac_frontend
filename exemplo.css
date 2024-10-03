@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box; /* Força os elementos a respeitarem o tamanho definido, não deixa a independente se tem padding ou border */ 
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: green;
+  height: 37px;
+  padding: 8px 2px 3px 4px; /*Interfere no tamanho do elemento*/
+  border: none;/*Interfere no tamanho do elemento*/
+  margin: 0;/*Não interfere no tamanho do elemento*/
+}
+
+h2 {
+  color: green;
+}
+
+#economy h2 {
+  color: gold;
+}
+
+.creation-date {
+  color: #CCC;
+}
