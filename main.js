@@ -13,8 +13,6 @@ numberTwo.addEventListener("input", () => {
 const validateNumbers = () => {
     const numberOne = parseFloat(document.getElementById("number_one").value);
     const numberTwo = parseFloat(document.getElementById("number_two").value);
-    console.log("Numero 1", isNaN(numberOne));
-    console.log("Numero 2", isNaN(numberTwo));
 
     if (!(numberTwo > numberOne)) {
         document.getElementById("message").classList.remove("success");
@@ -31,7 +29,6 @@ const validateNumbers = () => {
     if (isNaN(numberOne) && isNaN(numberTwo)) {
         document.getElementById("message").classList.remove("success");
         document.getElementById("message").classList.remove("error");
-        console.log("HUMMMMMM");
     }
 };
 
