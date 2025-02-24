@@ -2,14 +2,6 @@ const form = document.getElementById("form_number");
 const numberOne = document.getElementById("number_one");
 const numberTwo = document.getElementById("number_two");
 
-numberOne.addEventListener("input", () => {
-    validateNumbers();
-});
-
-numberTwo.addEventListener("input", () => {
-    validateNumbers();
-});
-
 const validateNumbers = () => {
     const numberOne = parseFloat(document.getElementById("number_one").value);
     const numberTwo = parseFloat(document.getElementById("number_two").value);
@@ -41,6 +33,10 @@ const cleanForm = () => {
     numberTwo.value = "";
     document.getElementById("message").classList.remove("success");
 };
+
+numberOne.addEventListener("input", validateNumbers());
+
+numberTwo.addEventListener("input", validateNumbers());
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
