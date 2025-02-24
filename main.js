@@ -34,9 +34,13 @@ const cleanForm = () => {
     document.getElementById("message").classList.remove("success");
 };
 
-numberOne.addEventListener("input", validateNumbers());
+numberOne.addEventListener("input", () => {
+    validateNumbers();
+});
 
-numberTwo.addEventListener("input", validateNumbers());
+numberTwo.addEventListener("input", () => {
+    validateNumbers();
+});
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
