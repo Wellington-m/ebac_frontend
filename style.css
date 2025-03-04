@@ -96,3 +96,7 @@ table td img {
 .reprovado {
     background-color: #ff0000;
 }
+
+.remove-btn {
+    cursor: pointer;
+}
