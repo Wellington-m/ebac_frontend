@@ -2,12 +2,20 @@ const activityForm = document.getElementById("activityForm");
 const happyEmoji = "src='./images/aprovado.png' alt='Emoji festejando'";
 const sadEmoji = 'src="./images/reprovado.png" alt="Emoji triste"';
 const activities = [];
+const spanApproved = '<span class="resultado aprovado">Aprovado</span>';
+const spanFailed = '<span class="resultado reprovado">Reprovado</span>';
 
 let linhas = "";
 
 activityForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    includeActivity();
+
+    calculateAverage();
+});
+
+const includeActivity = () => {
     const activityName = document.getElementById("activityName");
     const activityValue = document.getElementById("activityValue");
 
@@ -29,6 +37,11 @@ activityForm.addEventListener("submit", (e) => {
         activityNote: parseFloat(activityValue.value),
     });
 
+    activityName.value = "";
+    activityValue.value = "";
+};
+
+const calculateAverage = () => {
     const activityNotes = activities.map((value) => value.activityNote);
     const average = activityNotes.length
         ? activityNotes.reduce((acc, curr) => (acc += curr), 0) /
@@ -39,6 +52,13 @@ activityForm.addEventListener("submit", (e) => {
 
     averageElement.innerHTML = average;
 
-    activityName.value = "";
-    activityValue.value = "";
-});
+    calculateResult(average);
+};
+
+const calculateResult = (average) => {
+    const result = document.getElementById("result");
+
+    average >= 7
+        ? (result.innerHTML = spanApproved)
+        : (result.innerHTML = spanFailed);
+};
