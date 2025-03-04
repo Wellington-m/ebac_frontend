@@ -4,8 +4,6 @@ const sadEmoji = 'src="./images/reprovado.png" alt="Emoji triste"';
 const activities = [];
 
 let linhas = "";
-let totalValue = 0;
-let divisor = 0;
 
 activityForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -33,13 +31,13 @@ activityForm.addEventListener("submit", (e) => {
 
     const activityNotes = activities.map((value) => value.activityNote);
     const average = activityNotes.length
-        ? activityNotes.reduce((acc, curr, _index, array) => (acc += curr), 0) /
+        ? activityNotes.reduce((acc, curr) => (acc += curr), 0) /
           activityNotes.length
         : 0;
 
-    const averageElement = document.querySelector("tfoot tr").children[1];
+    const averageElement = document.getElementById("average");
 
-    averageElement.textContent = average;
+    averageElement.innerHTML = average;
 
     activityName.value = "";
     activityValue.value = "";
