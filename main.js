@@ -4,6 +4,7 @@ const sadEmoji = 'src="./images/reprovado.png" alt="Emoji triste"';
 const activities = [];
 const spanApproved = '<span class="resultado aprovado">Aprovado</span>';
 const spanFailed = '<span class="resultado reprovado">Reprovado</span>';
+const MINIMUMGRADE = 7;
 
 let linhas = "";
 
@@ -23,7 +24,9 @@ const includeActivity = () => {
     linha += `<td>${activityName.value}</td>`;
     linha += `<td>${activityValue.value}</td>`;
     linha += `<td>`;
-    linha += `<img ${activityValue.value >= 7 ? happyEmoji : sadEmoji}/>`;
+    linha += `<img ${
+        activityValue.value >= MINIMUMGRADE ? happyEmoji : sadEmoji
+    }/>`;
     linha += `</td>`;
     linha += `</tr>`;
 
@@ -58,7 +61,7 @@ const calculateAverage = () => {
 const calculateResult = (average) => {
     const result = document.getElementById("result");
 
-    average >= 7
+    average >= MINIMUMGRADE
         ? (result.innerHTML = spanApproved)
         : (result.innerHTML = spanFailed);
 };
