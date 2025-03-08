@@ -13,6 +13,7 @@ body {
 .container {
     width: 960px;
     margin: 0 auto;
+    display: flex;
 }
 
 /* Estilo do formulário */
@@ -84,4 +85,38 @@ fieldset legend {
 
 .priority_option img {
     margin: auto;
+}
+
+/* Estilização do Item */
+
+ul li {
+    list-style: none;
+}
+
+#todo-list {
+    flex-grow: 1;
+    padding: 0px 10px;
+}
+
+.todo-item {
+    width: 512.5px;
+    height: 100px;
+    background-color: #f4f2ff;
+    padding: 10px;
+    width: 300px;
+    border-radius: 12px;
+}
+
+.todo-item h1 {
+    font-size: 20px;
+}
+
+.todo-item p {
+    font-size: 10px;
+}
+
+.priority_obs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
 }
