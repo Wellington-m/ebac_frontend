@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do formulário */
+#toDoListForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+}
+
+/* Estilo dos inputs */
+#toDoListForm input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f4f4f7;
+    transition: all 0.3s;
+}
+
+#toDoListForm input:focus {
+    background: #e2e2f0;
+}
+
+/* Estilo do botão */
+#toDoListForm button {
+    background: #5a51dd;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#toDoListForm button:hover {
+    background: #4842c2;
+}
