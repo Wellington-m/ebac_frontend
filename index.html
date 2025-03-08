@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lista de tarefas</title>
+    </head>
+    <body>
+        <form id="toDoListForm">
+            <input type="text" id="" />
+            <button type="submit">Adicionar</button>
+            <fieldset>
+                <legend>Selecione a prioridade:</legend>
+
+                <div>
+                    <input
+                        type="radio"
+                        id="high_priority_input"
+                        name="priority"
+                        value="high_priority_input"
+                        checked
+                    />
+                    <label for="high_priority_input"
+                        ><img
+                            src="./images/High_priority_image.png"
+                            alt="losango vermelho"
+                    /></label>
+                </div>
+
+                <div>
+                    <input
+                        type="radio"
+                        id="medium_priority_input"
+                        name="priority"
+                        value="medium_priority_input"
+                    />
+                    <label for="medium_priority_input"
+                        ><img
+                            src="./images/Medium_priority_image.png"
+                            alt="losango amarelo"
+                    /></label>
+                </div>
+
+                <div>
+                    <input
+                        type="radio"
+                        id="low_priority_input"
+                        name="priority"
+                        value="low_priority_input"
+                    />
+                    <label for="low_priority_input"
+                        ><img
+                            src="./images/Low_priority_image.png"
+                            alt="losango Azul"
+                    /></label>
+                </div>
+            </fieldset>
+        </form>
+        <section id="todo-list">
+            <ul class="todo-item">
+                <li>
+                    <h1 class="todo-title">Título do item da lista</h1>
+                    <p class="todo-obs">Observação da tarefa</p>
+                    <div class="priority">
+                        <img
+                            src="./images/High_priority_image.png"
+                            alt="Um polígono vermelho"
+                        />
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </body>
+</html>
