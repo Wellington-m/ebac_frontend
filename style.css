@@ -2,6 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    padding: 30px;
+    background-color: #2b1887;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
 }
 
 /* Estilo do formulário */
@@ -47,4 +58,30 @@
 
 #toDoListForm button:hover {
     background: #4842c2;
+}
+
+form input[type="radio"] {
+    display: none; /*Oculta qual opção esta marcada*/
+}
+
+fieldset {
+    border: none;
+    display: flex;
+}
+
+fieldset legend {
+    font-size: 15px;
+}
+
+.priority_option {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.priority_option img {
+    margin: auto;
 }

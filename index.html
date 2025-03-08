@@ -5,72 +5,82 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Lista de tarefas</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
-        <form id="toDoListForm">
-            <input type="text" id="" placeholder="Nome da tarefa" />
-            <input type="text" id="" placeholder="Observação (opcional)" />
-            <button type="submit">Adicionar</button>
-            <fieldset>
-                <legend>Selecione a prioridade:</legend>
+        <div class="container">
+            <form id="toDoListForm">
+                <input type="text" id="" placeholder="Nome da tarefa" />
+                <input type="text" id="" placeholder="Observação (opcional)" />
 
-                <div>
-                    <input
-                        type="radio"
-                        id="high_priority_input"
-                        name="priority"
-                        value="high_priority_input"
-                        checked
-                    />
-                    <label for="high_priority_input"
-                        ><img
-                            src="./images/High_priority_image.png"
-                            alt="losango vermelho"
-                    /></label>
-                </div>
+                <fieldset>
+                    <legend>Selecione a prioridade:</legend>
 
-                <div>
-                    <input
-                        type="radio"
-                        id="medium_priority_input"
-                        name="priority"
-                        value="medium_priority_input"
-                    />
-                    <label for="medium_priority_input"
-                        ><img
-                            src="./images/Medium_priority_image.png"
-                            alt="losango amarelo"
-                    /></label>
-                </div>
-
-                <div>
-                    <input
-                        type="radio"
-                        id="low_priority_input"
-                        name="priority"
-                        value="low_priority_input"
-                    />
-                    <label for="low_priority_input"
-                        ><img
-                            src="./images/Low_priority_image.png"
-                            alt="losango Azul"
-                    /></label>
-                </div>
-            </fieldset>
-        </form>
-        <section id="todo-list">
-            <ul class="todo-item">
-                <li>
-                    <h1 class="todo-title">Título do item da lista</h1>
-                    <p class="todo-obs">Observação da tarefa</p>
-                    <div class="priority">
-                        <img
-                            src="./images/High_priority_image.png"
-                            alt="Um polígono vermelho"
+                    <div class="priority_option">
+                        <input
+                            type="radio"
+                            id="high_priority_input"
+                            name="priority"
+                            value="high_priority_input"
+                            checked
                         />
+                        <label for="high_priority_input"
+                            ><img
+                                src="./images/High_priority.svg"
+                                alt="losango vermelho"
+                        /></label>
                     </div>
-                </li>
-            </ul>
-        </section>
+
+                    <div class="priority_option">
+                        <input
+                            type="radio"
+                            id="medium_priority_input"
+                            name="priority"
+                            value="medium_priority_input"
+                        />
+                        <label for="medium_priority_input"
+                            ><img
+                                src="./images/Medium_priority.svg"
+                                alt="losango amarelo"
+                        /></label>
+                    </div>
+
+                    <div class="priority_option">
+                        <input
+                            type="radio"
+                            id="low_priority_input"
+                            name="priority"
+                            value="low_priority_input"
+                        />
+                        <label for="low_priority_input"
+                            ><img
+                                src="./images/Low_priority.svg"
+                                alt="losango Azul"
+                        /></label>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Adicionar</button>
+            </form>
+            <section id="todo-list">
+                <ul class="todo-item">
+                    <li>
+                        <h1 class="todo-title">Título do item da lista</h1>
+                        <p class="todo-obs">Observação da tarefa</p>
+                        <div class="priority">
+                            <img
+                                src="./images/High_priority.svg"
+                                alt="Um polígono vermelho"
+                            />
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </body>
 </html>
