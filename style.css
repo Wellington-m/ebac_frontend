@@ -25,7 +25,8 @@ body {
     padding: 16px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 320px;
+    width: 30%;
+    max-height: 310px;
 }
 
 /* Estilo dos inputs */
@@ -43,6 +44,37 @@ body {
 #toDoListForm input:focus {
     background: #e2e2f0;
 }
+/* Final do estilo dos inputs */
+
+/* Estilo dos radio button */
+label {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset legend {
+    font-size: 15px;
+}
+
+.priority_option {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.priority_option img {
+    width: 24px;
+}
+/* Final do estilo dos radio button */
 
 /* Estilo do botão */
 #toDoListForm button {
@@ -61,64 +93,39 @@ body {
     background: #4842c2;
 }
 
-form input[type="radio"] {
-    display: none; /*Oculta qual opção esta marcada*/
-}
-
-fieldset {
-    border: none;
-    display: flex;
-}
-
-fieldset legend {
-    font-size: 15px;
-}
-
-.priority_option {
-    width: 50px;
-    height: 50px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.priority_option img {
-    margin: auto;
-}
+/* Final do estilo do botão */
 
 /* Estilização do Item */
 
-ul li {
-    list-style: none;
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 28px;
 }
 
 #todo-list {
-    flex-grow: 1;
-    padding: 0px 10px;
+    padding-left: 20px;
+    width: 70%;
 }
 
 .todo-item {
-    width: 512.5px;
     height: 100px;
     background-color: #f4f2ff;
     padding: 10px 10px 0px 10px;
-    width: 300px;
+    width: 48%;
     border-radius: 12px;
     position: relative;
+    list-style: none;
 }
 
 .todo-item h1 {
-    font-size: 20px;
+    font-size: 18px;
+    max-height: 70%;
+    overflow-y: scroll;
 }
 
 .todo-item img {
     position: absolute;
     bottom: 8px;
-}
-
-.priority_obs {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
 }
