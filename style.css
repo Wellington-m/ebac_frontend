@@ -129,3 +129,8 @@ ul {
     position: absolute;
     bottom: 8px;
 }
+
+.crossed-text {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}

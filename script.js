@@ -28,6 +28,10 @@ $(document).ready(() => {
                 alt=${priorityImages[priority].alt}
             />`).appendTo(newItem);
 
+        $(newItem).on("click", (e) => {
+            $(e.currentTarget).find("h1").toggleClass("crossed-text");
+        });
+
         $(newItem).appendTo("ul");
 
         $("#todoValue").val("");
