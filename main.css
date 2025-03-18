@@ -11,14 +11,21 @@
     margin: 0 auto;
 }
 
-header {
+header,
+footer {
     background-color: #192a56;
     padding-top: 16px;
     color: #fff;
 }
 
-header > .container {
-    display: flex;
+header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+header > .container,
+footer > .container {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 16px;
@@ -46,6 +53,7 @@ nav li a {
 
 .burger_menu {
     width: 32px;
+    cursor: pointer;
 }
 
 .burger_menu span {
@@ -58,7 +66,7 @@ nav li a {
 
 .slick-prev,
 .slick-next {
-    z-index: 10 !important;
+    z-index: 1 !important;
     opacity: 0.5 !important;
 }
 .slick-next {
@@ -71,4 +79,101 @@ nav li a {
 .slick-prev:hover,
 .slick-next:hover {
     opacity: 1 !important;
+}
+
+.container-flex {
+    display: flex;
+}
+
+#about img {
+    max-width: 400px;
+    margin-right: 24px;
+}
+
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+.vehicle-list {
+    flex-wrap: wrap;
+    column-gap: 5%;
+    row-gap: 25px;
+}
+
+.vehicle-list li {
+    list-style: none;
+    max-width: 30%;
+}
+
+.vehicle-list li img {
+    max-width: 100%;
+}
+
+.vehicle-list li h3 {
+    margin: 16px 0;
+}
+
+.price {
+    display: block;
+    margin: 16px 0;
+}
+
+.price del {
+    color: #ccc;
+    font-size: 14px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0px;
+    border: none;
+    background-color: #119759;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+form {
+    width: 360px;
+}
+
+.form-field {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-weight: bold;
+}
+
+.form-field input,
+.form-field textarea {
+    padding: 8px;
+}
+
+.form-field textarea {
+    resize: none;
+    height: 120px;
+}
+
+form button {
+    max-width: 120px;
+}
+
+footer li {
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img {
+    height: 32px;
 }
