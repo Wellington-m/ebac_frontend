@@ -54,3 +54,20 @@ nav li a {
     display: block;
     margin-bottom: 4px;
 }
+
+.slick-prev,
+.slick-next {
+    z-index: 10 !important;
+    opacity: 0.5 !important;
+}
+.slick-next {
+    right: 10px !important;
+}
+.slick-prev {
+    left: 10px !important;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    opacity: 1 !important;
+}
