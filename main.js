@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(() => {
     $("#slick_carrousel").slick();
 
     $(".burger_menu").on("click", () => {
@@ -26,7 +26,23 @@ $(document).ready(() => {
             name: "Este campo é obrigatório",
         },
         submitHandler: (form) => {
-            console.log("Enviado");
+            console.log("Enviado", form);
         },
+    });
+
+    $(".vehicle-list button").on("click", function () {
+        //Não da pra usar Arrow function com o "this"
+        const destiny = $("#contact");
+
+        const text = $(this).parent().find("h3").text();
+
+        $("#vehicle").val(text);
+
+        $("html, body").animate(
+            {
+                scrollTop: destiny.offset().top,
+            },
+            1000
+        );
     });
 });
