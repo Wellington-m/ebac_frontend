@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 16px 0 0;
+    border-bottom: 1px solid #ccc;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu > li {
+    list-style: none;
+    padding: 16px;
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+.menu > li:hover {
+    border-top: 4px solid red;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    border: 1px solid red;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    white-space: nowrap; /* Garante que os links não quebrem linha */
+    background-color: #fff;
+}
+
+.submenu li {
+    list-style: none;
+    padding: 8px;
+}
