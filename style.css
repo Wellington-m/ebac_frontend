@@ -14,6 +14,7 @@
 header {
     padding: 16px 0 0;
     border-bottom: 1px solid #ccc;
+    margin-bottom: 56px;
 }
 
 header .container {
@@ -54,4 +55,45 @@ header .container {
 .submenu li {
     list-style: none;
     padding: 8px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.news img {
+    max-width: 100%;
+}
+
+.emphasis {
+    margin-bottom: 56px;
+}
+
+.emphasis .news a {
+    display: flex;
+    font-size: 2em;
+}
+
+.emphasis .news img {
+    margin-right: 8px;
+}
+
+section h2 {
+    margin-bottom: 32px;
+}
+
+aside {
+    padding-left: 40px;
+}
+
+aside .news {
+    margin-bottom: 24px;
+}
+
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(3, 32.6%);
+    column-gap: 1%;
+    row-gap: 5%;
 }
