@@ -159,3 +159,35 @@ aside .news {
         padding: 8px;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .button_menu {
+        display: none;
+    }
+
+    .emphasis .news a {
+        font-size: 1.5em;
+    }
+
+    .news-list {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    .menu {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .button_menu {
+        display: none;
+    }
+
+    .container {
+        padding: 8px;
+    }
+}
