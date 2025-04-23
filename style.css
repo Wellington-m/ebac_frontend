@@ -97,3 +97,65 @@ aside .news {
     column-gap: 1%;
     row-gap: 5%;
 }
+
+@media screen and (max-width: 767px) {
+    header div.container {
+        flex-direction: column;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%; /*Perguntar porque desse valor*/
+    }
+
+    .emphasis .news a {
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .emphasis .news img {
+        margin-right: 0px;
+    }
+
+    .news-list {
+        display: block;
+    }
+
+    .news-list .news {
+        margin-bottom: 32px;
+    }
+
+    aside {
+        padding-left: 0px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .submenu {
+        display: block;
+        border: none;
+        position: relative;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .submenu li {
+        list-style: none;
+        padding: 8px;
+    }
+
+    .button_menu {
+        display: flex;
+        justify-content: center;
+        margin: 16px 0;
+    }
+
+    .button_menu button {
+        padding: 8px;
+    }
+}
