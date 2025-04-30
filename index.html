@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lista de tarefas</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <form id="toDoListForm">
+                <input
+                    type="text"
+                    id="todoValue"
+                    placeholder="Tarefa"
+                    required
+                />
+
+                <fieldset>
+                    <legend>Selecione a prioridade:</legend>
+
+                    <div class="priority_option">
+                        <input
+                            type="radio"
+                            id="high_priority_input"
+                            name="priority"
+                            value="high_priority_input"
+                            checked
+                        />
+                        <label for="high_priority_input"
+                            ><p>Máxima</p>
+                            <img
+                                src="./images/High_priority.svg"
+                                alt="losango vermelho"
+                        /></label>
+                    </div>
+
+                    <div class="priority_option">
+                        <input
+                            type="radio"
+                            id="medium_priority_input"
+                            name="priority"
+                            value="medium_priority_input"
+                        />
+                        <label for="medium_priority_input"
+                            ><p>Média</p>
+                            <img
+                                src="./images/Medium_priority.svg"
+                                alt="losango amarelo"
+                        /></label>
+                    </div>
+
+                    <div class="priority_option">
+                        <input
+                            type="radio"
+                            id="low_priority_input"
+                            name="priority"
+                            value="low_priority_input"
+                        />
+                        <label for="low_priority_input"
+                            ><p>Baixa</p>
+                            <img
+                                src="./images/Low_priority.svg"
+                                alt="losango Azul"
+                        /></label>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Adicionar</button>
+            </form>
+            <section id="todo-list">
+                <ul>
+                    <!-- <li class="todo-item">
+                        <h1 class="todo-title">
+                            Título do item da listafdsfs dvcsdvsdv sdvsd
+                            sdvsdvsd
+                        </h1>
+
+                        <img
+                            src="./images/High_priority.svg"
+                            alt="Um polígono vermelho"
+                        />
+                    </li> -->
+                </ul>
+            </section>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

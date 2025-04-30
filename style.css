@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    padding: 30px;
+    background-color: #2b1887;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* Estilo do formulário */
+#toDoListForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    max-height: 310px;
+}
+
+/* Estilo dos inputs */
+#toDoListForm input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f4f4f7;
+    transition: all 0.3s;
+}
+
+#toDoListForm input:focus {
+    background: #e2e2f0;
+}
+/* Final do estilo dos inputs */
+
+/* Estilo dos radio button */
+label {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset legend {
+    font-size: 15px;
+}
+
+.priority_option {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.priority_option img {
+    width: 24px;
+}
+/* Final do estilo dos radio button */
+
+/* Estilo do botão */
+#toDoListForm button {
+    background: #5a51dd;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#toDoListForm button:hover {
+    background: #4842c2;
+}
+
+/* Final do estilo do botão */
+
+/* Estilização do Item */
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 28px;
+}
+
+#todo-list {
+    padding-left: 20px;
+    width: 70%;
+}
+
+.todo-item {
+    height: 100px;
+    background-color: #f4f2ff;
+    padding: 10px 10px 0px 10px;
+    width: 48%;
+    border-radius: 12px;
+    position: relative;
+    list-style: none;
+}
+
+.todo-item h1 {
+    font-size: 18px;
+    max-height: 70%;
+    overflow-y: scroll;
+}
+
+.todo-item img {
+    position: absolute;
+    bottom: 8px;
+}
+
+.crossed-text {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
