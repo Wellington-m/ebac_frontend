@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background-color: darkgrey;
+    margin-top: 10px;
+}
+
+#form_number {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Define uma largura máxima para o formulário */
+    margin: 0 auto; /* Centraliza o formulário na página */
+    padding: 15px;
+}
+
+#form_number label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#form_number input {
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#form_number button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#form_number button:hover {
+    background-color: #0056b3;
+}
+
+#message {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 20px;
+    padding: 10px;
+    display: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+#message.error {
+    background-color: red;
+    display: block;
+}
+
+#message.success {
+    background-color: green;
+    display: block;
+}
