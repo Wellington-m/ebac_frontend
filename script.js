@@ -41,4 +41,19 @@ $(document).ready(function () {
             //Não injeta a label de erro do JQuery no HTML, pois da conflito com a estilização da label pelo bootstrap
         },
     });
+
+    $("#theme").on("click", function () {
+        const theme = $("body").attr("data-bs-theme");
+        changeTheme(theme);
+    });
+
+    const changeTheme = (theme) => {
+        if (theme === "light") {
+            $("body").attr("data-bs-theme", "dark");
+            $("#theme").text("light_mode");
+        } else {
+            $("body").attr("data-bs-theme", "light");
+            $("#theme").text("dark_mode");
+        }
+    };
 });

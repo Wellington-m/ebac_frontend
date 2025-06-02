@@ -2,6 +2,12 @@
     padding: 1rem 1.5rem;
 }
 
+#theme-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
 @media (min-width: 768px) {
     #btn-submit-contact {
         display: flex;
@@ -13,5 +19,15 @@
 @media (min-width: 1400px) {
     #btn-submit-contact {
         justify-content: start;
+    }
+
+    #theme-container {
+        position: relative;
+        height: 24px;
+    }
+
+    #theme {
+        position: absolute;
+        left: 16%;
     }
 }
