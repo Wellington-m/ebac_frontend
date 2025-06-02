@@ -1,3 +1,17 @@
 .form-floating > label {
     padding: 1rem 1.5rem;
 }
+
+@media (min-width: 768px) {
+    #btn-submit-contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1400px) {
+    #btn-submit-contact {
+        justify-content: start;
+    }
+}

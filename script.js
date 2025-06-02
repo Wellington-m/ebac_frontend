@@ -33,6 +33,9 @@ $(document).ready(function () {
             if (errorMessages.length > 0) {
                 alert(errorMessages.join("\n"));
             }
+
+            //leva para o primeiro elemento com erro da lista
+            validator.errorList[0].element.focus();
         },
         errorPlacement: function (error, element) {
             //Não injeta a label de erro do JQuery no HTML, pois da conflito com a estilização da label pelo bootstrap

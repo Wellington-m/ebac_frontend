@@ -13,10 +13,10 @@
         />
         <link rel="stylesheet" href="main.css" />
     </head>
-    <body>
+    <body data-bs-theme="dark">
         <div class="container mt-3">
             <form id="form-contact" class="row">
-                <div class="col-12 form-floating mb-3">
+                <div class="col-12 col-md-6 col-xxl-3 form-floating mb-3">
                     <input
                         class="form-control"
                         type="text"
@@ -29,7 +29,7 @@
                     <label for="name">Nome:</label>
                 </div>
 
-                <div class="col-12 form-floating mb-3">
+                <div class="col-12 col-md-6 col-xxl-3 form-floating mb-3">
                     <input
                         class="form-control"
                         type="email"
@@ -41,7 +41,7 @@
                     <label class="form-label" for="email">E-mail:</label>
                 </div>
 
-                <div class="col-12 form-floating mb-3">
+                <div class="col-12 col-md-6 col-xxl-3 form-floating mb-3">
                     <input
                         class="form-control"
                         type="tel"
@@ -52,7 +52,10 @@
                     />
                     <label class="form-label" for="cellphone">Telefone:</label>
                 </div>
-                <div class="col-12 mb-3">
+                <div
+                    id="btn-submit-contact"
+                    class="col-12 col-md-6 col-xxl-3 mb-3"
+                >
                     <button class="btn btn-success" type="submit">
                         Enviar
                     </button>
