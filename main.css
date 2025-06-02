@@ -2,6 +2,10 @@
     padding: 1rem 1.5rem;
 }
 
+#theme {
+    cursor: pointer;
+}
+
 #theme-container {
     display: flex;
     align-items: center;

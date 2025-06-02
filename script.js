@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    const element = "<div class='alert alert-danger'></div>";
+
     $("#cellphone").mask("(00) 00000-0000");
 
     $("#form-contact").validate({
@@ -25,20 +27,13 @@ $(document).ready(function () {
             alert("Informações enviadas com sucesso");
             form.reset();
         },
-        invalidHandler: function (event, validator) {
-            var errorMessages = validator.errorList.map(function (erro) {
-                return erro.message;
-            });
-
-            if (errorMessages.length > 0) {
-                alert(errorMessages.join("\n"));
-            }
-
-            //leva para o primeiro elemento com erro da lista
-            validator.errorList[0].element.focus();
+        errorElement: "div", // substitui <label> de erro padrão por <div>
+        errorClass: "alert alert-danger", //Adiciona as classes para estilizar a <div>
+        highlight: function (element) {
+            $(element).addClass("is-invalid"); // Classe Bootstrap para input inválido
         },
-        errorPlacement: function (error, element) {
-            //Não injeta a label de erro do JQuery no HTML, pois da conflito com a estilização da label pelo bootstrap
+        unhighlight: function (element) {
+            $(element).removeClass("is-invalid"); // Remove quando válido
         },
     });
 
