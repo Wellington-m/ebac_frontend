@@ -6,14 +6,15 @@ body {
   background-color: #e15f41;
 }
 
-.nav .nav-link.active {
+header .nav .nav-link.active {
   background-color: #fff;
   color: #e15f41;
 }
 
-.nav .nav-link,
+header .nav .nav-link,
 .navbar-brand,
-.navbar-brand:hover {
+.navbar-brand:hover,
+.nav-foodMenu .nav-link.active:hover {
   color: #fff;
 }
 
@@ -29,6 +30,16 @@ body {
   color: #e15f41;
 }
 
-#about {
+#about,
+#foodMenu {
   background-color: #ffeae6;
+}
+
+.nav-foodMenu .nav-link.active {
+  background-color: #e15f41;
+  color: #fff;
+}
+
+.nav-foodMenu .nav-link:hover {
+  color: #e15f41;
 }
