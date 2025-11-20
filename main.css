@@ -14,7 +14,7 @@ header .nav .nav-link.active {
 header .nav .nav-link,
 .navbar-brand,
 .navbar-brand:hover,
-.nav-foodMenu .nav-link.active:hover {
+.nav-food-menu .nav-link.active:hover {
   color: #fff;
 }
 
@@ -31,15 +31,21 @@ header .nav .nav-link,
 }
 
 #about,
-#foodMenu {
+#food-menu {
   background-color: #ffeae6;
 }
 
-.nav-foodMenu .nav-link.active {
+.nav-food-menu .nav-link.active,
+#contact-us form button {
   background-color: #e15f41;
   color: #fff;
 }
 
-.nav-foodMenu .nav-link:hover {
+.nav-food-menu .nav-link:hover {
   color: #e15f41;
+}
+
+.social-links li {
+  list-style: none;
+  display: inline;
 }
