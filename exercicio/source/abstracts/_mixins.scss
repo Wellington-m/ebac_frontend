@@ -1,0 +1,15 @@
+@use "./variables";
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: variables.$mobileBreakpoint) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (max-width: variables.$tabletBreakpoint) {
+      @content;
+    }
+  }
+}

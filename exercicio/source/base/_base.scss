@@ -1,0 +1,26 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+body {
+  background-color: variables.$backgroundColor;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@include mixins.respond-to(tablet) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+section {
+  padding: 56px 0;
+}
