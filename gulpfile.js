@@ -1,6 +1,14 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
+const imagemin = require("gulp-imagemin");
+
+function compressImages() {
+  return gulp
+    .src("./source/assets/images/*", { encoding: false })
+    .pipe(imagemin())
+    .pipe(gulp.dest("build/assets/images"));
+}
 
 function compileHTML() {
   return gulp.src("./source/index.html").pipe(gulp.dest("build/"));
@@ -26,5 +34,11 @@ exports.default = function () {
     "./source/index.html",
     { ignoreInitial: false },
     gulp.series(compileHTML)
+  );
+
+  gulp.watch(
+    "source/assets/images/*",
+    { ignoreInitial: false },
+    gulp.series(compressImages)
   );
 };
