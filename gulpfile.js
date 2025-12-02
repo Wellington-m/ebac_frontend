@@ -22,4 +22,10 @@ exports.default = function () {
     { ignoreInitial: false },
     gulp.series(compileSass)
   );
+
+  gulp.watch(
+    "./source/index.html",
+    { ignoreInitial: false },
+    gulp.series(compileHTML)
+  );
 };
