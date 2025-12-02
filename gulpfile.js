@@ -1,19 +1,15 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
-const htmlmin = require("gulp-htmlmin");
 
 function compileHTML() {
-  return gulp
-    .src("./source/index.html")
-    .pipe(htmlmin())
-    .pipe(gulp.dest("build/"));
+  return gulp.src("./source/index.html").pipe(gulp.dest("build/"));
 }
 
 function compileSass() {
   return gulp
     .src("./source/styles/main.scss")
     .pipe(sass({ style: "compressed" }).on("Error", sass.logError))
-    .pipe(gulp.dest("./build/style"));
+    .pipe(gulp.dest("./build/styles"));
 }
 
 exports.default = function () {
